@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from typing import List
+import logging
+import logging.config
+from django.utils.log import DEFAULT_LOGGING
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +30,7 @@ SECRET_KEY = "django-insecure-+@7)e%^^fcav_-_6v%jnet=6g34$w=6a(vi#v%pp-*fno)i+fo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS: List[str] = ["*"]
 
 
 # Application definition
@@ -38,6 +42,17 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # installed apps
+    "rest_framework",
+    "drf_yasg",
+    "phonenumber_field",
+    # local apps
+    "me",
+    "certificate",
+    "education",
+    "experience",
+    "project",
+    "blog",
 ]
 
 MIDDLEWARE = [
@@ -70,6 +85,25 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "portfolio.wsgi.application"
 
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
+    "DEFAULT_PARSER_CLASSES": [
+        "rest_framework.parsers.JSONParser",
+        "rest_framework.parsers.FormParser",
+        "rest_framework.parsers.MultiPartParser",
+    ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 15,
+}
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+SWAGGER_SETTINGS = {
+    "DEFAULT_AUTO_SCHEMA_CLASS": "drf_yasg.inspectors.SwaggerAutoSchema",
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -109,19 +143,87 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Africa/Lagos"
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "static"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+logger = logging.getLogger(__name__)
+
+LOG_LEVEL = "INFO"
+
+try:
+    logging.config.dictConfig(
+        {
+            "version": 1,
+            "disable_existing_loggers": False,
+            "formatters": {
+                "console": {
+                    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+                },
+                "file": {
+                    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+                },
+                "django.server": DEFAULT_LOGGING["formatters"]["django.server"],
+            },
+            "handlers": {
+                "console": {
+                    "level": LOG_LEVEL,
+                    "class": "logging.StreamHandler",
+                    "formatter": "console",
+                },
+                "file": {
+                    "level": LOG_LEVEL,
+                    "class": "logging.handlers.RotatingFileHandler",
+                    "formatter": "file",
+                    "filename": BASE_DIR / "logs" / "django.log",
+                    "maxBytes": 1024 * 1024 * 10,  # 5 MB
+                    "backupCount": 5,
+                },
+                "django.server": DEFAULT_LOGGING["handlers"]["django.server"],
+            },
+            "loggers": {
+                "": {
+                    "level": LOG_LEVEL,
+                    "handlers": ["console", "file"],
+                    "propagate": False,
+                },
+                "apps": {
+                    "level": LOG_LEVEL,
+                    "handlers": ["console", "file"],
+                    "propagate": False,
+                },
+            },
+            "django.server": DEFAULT_LOGGING["loggers"]["django.server"],
+        }
+    )
+
+except Exception:
+    pass
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": (os.getenv("REDIS_URL")),
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    }
+}
