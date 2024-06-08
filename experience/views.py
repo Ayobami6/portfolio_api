@@ -7,6 +7,8 @@ from experience.serializers import ExperienceSerializer
 from rest_framework.response import Response
 from utils.response import service_response
 from rest_framework.exceptions import MethodNotAllowed
+from rest_framework.schemas.openapi import AutoSchema
+from drf_yasg.utils import swagger_auto_schema
 
 # Create your views here.
 
@@ -51,14 +53,18 @@ class ExperienceViewSet(viewsets.ModelViewSet):
         except Exception:
             return handle_internal_server_exception()
 
+    @swagger_auto_schema(auto_schema=None)
     def destroy(self, request, *args, **kwargs):
         raise MethodNotAllowed(request.method)
 
+    @swagger_auto_schema(auto_schema=None)
     def create(self, request, *args, **kwargs):
         raise MethodNotAllowed(request.method)
 
+    @swagger_auto_schema(auto_schema=None)
     def update(self, request, *args, **kwargs):
         raise MethodNotAllowed(request.method)
 
+    @swagger_auto_schema(auto_schema=None)
     def partial_update(self, request, *args, **kwargs):
         raise MethodNotAllowed(request.method)
