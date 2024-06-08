@@ -253,3 +253,7 @@ TypeError: Object of type PhoneNumber is not JSON serializable
 2024-06-08 00:22:35,623 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-06-08 00:23:31,863 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\me\views.py changed, reloading.
 2024-06-08 00:23:38,774 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 16:29:53,667 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 16:39:22,824 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 16:39:32,666 - django.request - WARNING - Not Found: /favicon.ico
+2024-06-08 16:39:48,045 - django.security.csrf - WARNING - Forbidden (CSRF token from POST incorrect.): /admin/login/
