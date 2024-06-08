@@ -41,6 +41,7 @@ urlpatterns = [
     path("", include("me.urls")),
     path("", include("experience.urls")),
     path("", include("project.urls")),
+    path("", include("blog.urls")),
     path("", lambda request: redirect("docs/", permanent=True)),
     path(
         "docs/",

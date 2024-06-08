@@ -348,3 +348,69 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'experiences' not found. 'exp
 2024-06-08 21:41:09,610 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-06-08 21:41:28,213 - django.request - WARNING - Not Found: /favicon.ico
 2024-06-08 22:05:59,793 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-08 22:06:06,998 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 22:09:14,708 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\models.py changed, reloading.
+2024-06-08 22:11:00,106 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 22:16:14,206 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\models.py changed, reloading.
+2024-06-08 22:16:45,811 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 22:23:19,807 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 23:25:16,163 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\reverse.py changed, reloading.
+2024-06-08 23:25:27,166 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 23:27:29,843 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-08 23:27:32,650 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 23:28:31,253 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\blog\views.py", line 26, in list
+    data: List[dict] = serializer.data
+                       ^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\fields.py", line 1872, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "C:\Users\Ayo\Projects\portfolio_api\blog\serializers.py", line 16, in get_self_url
+    return reverse("blog_posts_detail", kwargs={"pk": obj.pk}, request=request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'blog_posts_detail' not found. 'blog_posts_detail' is not a valid view function or pattern name.
+
+2024-06-08 23:28:31,260 - django.request - ERROR - Internal Server Error: /blog_posts/
+2024-06-08 23:28:52,064 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\blog\serializers.py changed, reloading.
+2024-06-08 23:28:54,375 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 23:30:38,488 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\blog\views.py", line 38, in retrieve
+    post: BlogPost = BlogPost.objects.get(id=kwargs["pk"])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+blog.models.BlogPost.DoesNotExist: BlogPost matching query does not exist.
+
+2024-06-08 23:30:38,490 - django.request - ERROR - Internal Server Error: /blog_posts/2/
+2024-06-08 23:31:43,281 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\blog\views.py changed, reloading.
+2024-06-08 23:31:45,728 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 23:32:08,262 - django.request - WARNING - Not Found: /blog_posts/2/

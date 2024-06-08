@@ -8,8 +8,11 @@ from utils.decorators import str_meta
 @str_meta
 class Project(models.Model):
     name = models.CharField(max_length=100)
-    description = CKEditor5Field("Text", config_name="extends")
+    description = models.TextField()
     link = models.URLField()
     source_code_link = models.URLField(
         default="https://github.com/Ayobami6/portfolio_api"
     )
+
+
+# TODO: Add Tools inline model to Project

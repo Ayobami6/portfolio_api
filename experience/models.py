@@ -11,7 +11,7 @@ class Experience(models.Model):
     title = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
-    description = CKEditor5Field("Text", config_name="extends")
+    description = models.TextField()
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
     is_current = models.BooleanField(default=False)
