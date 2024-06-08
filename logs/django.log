@@ -257,3 +257,81 @@ TypeError: Object of type PhoneNumber is not JSON serializable
 2024-06-08 16:39:22,824 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-06-08 16:39:32,666 - django.request - WARNING - Not Found: /favicon.ico
 2024-06-08 16:39:48,045 - django.security.csrf - WARNING - Forbidden (CSRF token from POST incorrect.): /admin/login/
+2024-06-08 16:43:16,782 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:02:13,116 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-08 21:02:24,706 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:02:32,235 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-08 21:02:45,715 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:03:30,735 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\experience\views.py", line 29, in list
+    data: List[dict] = serializer.data
+                       ^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\fields.py", line 1871, in to_representation
+    method = getattr(self.parent, self.method_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ExperienceSerializer' object has no attribute 'get_self_url'
+
+2024-06-08 21:03:30,759 - django.request - ERROR - Internal Server Error: /experiences/
+2024-06-08 21:04:01,446 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\experience\serializers.py changed, reloading.
+2024-06-08 21:04:07,908 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:04:18,695 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\experience\views.py", line 29, in list
+    data: List[dict] = serializer.data
+                       ^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\fields.py", line 1872, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "C:\Users\Ayo\Projects\portfolio_api\experience\serializers.py", line 24, in get_self_url
+    return reverse("experiences", kwargs={"pk": obj.pk}, request=request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'experiences' not found. 'experiences' is not a valid view function or pattern name.
+
+2024-06-08 21:04:18,982 - django.request - ERROR - Internal Server Error: /experiences/
+2024-06-08 21:05:05,181 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\experience\urls.py changed, reloading.
+2024-06-08 21:05:10,454 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:13:13,088 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\experience\serializers.py changed, reloading.
+2024-06-08 21:13:27,491 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:17:03,338 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\experience\views.py changed, reloading.
+2024-06-08 21:17:21,126 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:18:59,131 - django.request - WARNING - Method Not Allowed: /experiences/1/
