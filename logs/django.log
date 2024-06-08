@@ -414,3 +414,6 @@ blog.models.BlogPost.DoesNotExist: BlogPost matching query does not exist.
 2024-06-08 23:31:43,281 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\blog\views.py changed, reloading.
 2024-06-08 23:31:45,728 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-06-08 23:32:08,262 - django.request - WARNING - Not Found: /blog_posts/2/
+2024-06-08 23:34:01,490 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-08 23:34:04,626 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 23:35:12,202 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\experience\views.py changed, reloading.

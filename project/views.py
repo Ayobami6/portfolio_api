@@ -47,6 +47,10 @@ class ProjectViewSet(viewsets.ModelViewSet):
                 data=data,
                 status_code=200,
             )
+        except Project.DoesNotExist:
+            return service_response(
+                status="error", message="Project Not Found", status_code=404
+            )
         except Exception:
             return handle_internal_server_exception()
 

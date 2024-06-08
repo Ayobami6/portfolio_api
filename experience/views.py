@@ -50,6 +50,10 @@ class ExperienceViewSet(viewsets.ModelViewSet):
                 data=data,
                 status_code=200,
             )
+        except Experience.DoesNotExist:
+            return service_response(
+                status="error", message="Project Not Found", status_code=404
+            )
         except Exception:
             return handle_internal_server_exception()
 
