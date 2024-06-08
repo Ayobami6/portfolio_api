@@ -40,6 +40,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("me.urls")),
     path("", include("experience.urls")),
+    path("", include("project.urls")),
     path("", lambda request: redirect("docs/", permanent=True)),
     path(
         "docs/",

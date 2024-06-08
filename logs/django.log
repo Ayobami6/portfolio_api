@@ -344,3 +344,7 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'experiences' not found. 'exp
 2024-06-08 21:26:55,007 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-06-08 21:27:19,974 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\experience\views.py changed, reloading.
 2024-06-08 21:27:33,365 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:31:13,789 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\models.py changed, reloading.
+2024-06-08 21:41:09,610 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-08 21:41:28,213 - django.request - WARNING - Not Found: /favicon.ico
+2024-06-08 22:05:59,793 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.

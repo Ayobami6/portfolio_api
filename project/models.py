@@ -10,3 +10,6 @@ class Project(models.Model):
     name = models.CharField(max_length=100)
     description = CKEditor5Field("Text", config_name="extends")
     link = models.URLField()
+    source_code_link = models.URLField(
+        default="https://github.com/Ayobami6/portfolio_api"
+    )
