@@ -38,11 +38,11 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api", include("me.urls")),
-    path("api", include("experience.urls")),
-    path("api", include("project.urls")),
-    path("api", include("blog.urls")),
-    path("api", include("certificate.urls")),
+    path("api/", include("experience.urls")),
+    path("api/", include("me.urls")),
+    path("api/", include("project.urls")),
+    path("api/", include("blog.urls")),
+    path("api/", include("certificate.urls")),
     path("", lambda request: redirect("docs/", permanent=True)),
     path(
         "docs/",
