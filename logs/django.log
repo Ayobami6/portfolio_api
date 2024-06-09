@@ -418,3 +418,8 @@ blog.models.BlogPost.DoesNotExist: BlogPost matching query does not exist.
 2024-06-08 23:34:04,626 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-06-08 23:35:12,202 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\experience\views.py changed, reloading.
 2024-06-08 23:35:14,800 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 13:21:23,899 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 13:21:38,798 - django.request - WARNING - Not Found: /favicon.ico
+2024-06-09 13:50:30,128 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-09 13:50:36,589 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 13:50:53,818 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\certificate\urls.py changed, reloading.
