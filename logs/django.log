@@ -424,3 +424,15 @@ blog.models.BlogPost.DoesNotExist: BlogPost matching query does not exist.
 2024-06-09 13:50:36,589 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-06-09 13:50:53,818 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\certificate\urls.py changed, reloading.
 2024-06-09 13:50:58,622 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 15:12:38,309 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 16:17:44,104 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 16:19:41,421 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-09 16:19:46,491 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 16:20:02,950 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-09 16:20:09,333 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 16:20:17,486 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-09 16:20:21,720 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 16:20:41,010 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-09 16:20:46,637 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-09 16:21:42,476 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
+2024-06-09 16:21:47,524 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
