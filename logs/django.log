@@ -437,3 +437,202 @@ blog.models.BlogPost.DoesNotExist: BlogPost matching query does not exist.
 2024-06-09 16:21:42,476 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\portfolio\urls.py changed, reloading.
 2024-06-09 16:21:47,524 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
 2024-06-09 20:25:52,048 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-11 22:53:55,200 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-11 22:54:28,594 - django.request - WARNING - Not Found: /favicon.ico
+2024-06-11 22:54:44,720 - django.security.csrf - WARNING - Forbidden (CSRF token from POST incorrect.): /admin/login/
+2024-06-12 00:00:05,304 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\models.py changed, reloading.
+2024-06-12 00:00:08,951 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:01:05,880 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\admin.py changed, reloading.
+2024-06-12 00:01:08,367 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:01:42,459 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\admin.py changed, reloading.
+2024-06-12 00:01:45,753 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:03:43,611 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:09:02,577 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\models.py changed, reloading.
+2024-06-12 00:09:06,642 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:10:26,512 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:10:32,722 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:10:43,507 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:10:46,407 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:10:54,346 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:10:57,560 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:11:09,772 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\serializers.py changed, reloading.
+2024-06-12 00:11:12,890 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:11:39,112 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\project\views.py", line 31, in list
+    data: List[dict] = serializer.data
+                       ^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\relations.py", line 564, in to_representation
+    return [
+           ^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\relations.py", line 565, in <listcomp>
+    self.child_relation.to_representation(value)
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\relations.py", line 373, in to_representation
+    assert 'request' in self.context, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: `HyperlinkedRelatedField` requires the request in the serializer context. Add `context={'request': request}` when instantiating the serializer.
+
+2024-06-12 00:11:39,118 - django.request - ERROR - Internal Server Error: /api/projects/
+2024-06-12 00:12:48,252 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:12:51,015 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:12:55,979 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\relations.py", line 396, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\relations.py", line 334, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'tool-detail' not found. 'tool-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\project\views.py", line 31, in list
+    data: List[dict] = serializer.data
+                       ^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\relations.py", line 564, in to_representation
+    return [
+           ^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\relations.py", line 565, in <listcomp>
+    self.child_relation.to_representation(value)
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\relations.py", line 411, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "tool-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+
+2024-06-12 00:12:55,988 - django.request - ERROR - Internal Server Error: /api/projects/
+2024-06-12 00:14:22,954 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\serializers.py changed, reloading.
+2024-06-12 00:14:30,180 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:15:46,920 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:15:49,436 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:15:54,415 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\project\views.py", line 26, in list
+    Prefetch("tools", queryset=Tool.objects.only("name").values()),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\django\db\models\query.py", line 2160, in __init__
+    raise ValueError(
+ValueError: Prefetch querysets cannot use raw(), values(), and values_list().
+
+2024-06-12 00:15:54,419 - django.request - ERROR - Internal Server Error: /api/projects/
+2024-06-12 00:16:06,625 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:16:09,063 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:16:16,168 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:16:19,694 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:16:25,059 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\project\views.py", line 31, in list
+    data: List[dict] = serializer.data
+                       ^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 713, in to_representation
+    return [
+           ^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Ayo\Projects\portfolio_api\.venv\Lib\site-packages\rest_framework\fields.py", line 1872, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "C:\Users\Ayo\Projects\portfolio_api\project\serializers.py", line 29, in get_self_url
+    return reverse("projects-detail", kwargs={"pk": obj.pk}, request=request)
+                                                    ^^^^^^
+AttributeError: 'dict' object has no attribute 'pk'
+
+2024-06-12 00:16:25,065 - django.request - ERROR - Internal Server Error: /api/projects/
+2024-06-12 00:17:01,546 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:17:03,606 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:17:26,482 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:17:29,508 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:17:33,633 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\project\views.py", line 26, in list
+    Prefetch("tools", queryset=Tool.objects.only("name").name),
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'name'
+
+2024-06-12 00:17:33,635 - django.request - ERROR - Internal Server Error: /api/projects/
+2024-06-12 00:17:45,459 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:17:49,567 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:19:52,543 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:19:55,490 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:20:03,003 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\project\views.py", line 32, in list
+    data["tools"] = [tool.name for tool in projects.tools.all()]
+                                           ^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'tools'
+
+2024-06-12 00:20:03,006 - django.request - ERROR - Internal Server Error: /api/projects/
+2024-06-12 00:22:00,170 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:22:03,130 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:22:21,673 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:22:25,143 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:22:32,116 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\project\views.py", line 34, in list
+    for tool in project.tools.all()
+                ^^^^^^^
+NameError: name 'project' is not defined
+
+2024-06-12 00:22:32,136 - django.request - ERROR - Internal Server Error: /api/projects/
+2024-06-12 00:22:51,192 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:22:54,028 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:23:32,344 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:23:36,060 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:23:56,339 - utils.exceptions - ERROR - Traceback (most recent call last):
+  File "C:\Users\Ayo\Projects\portfolio_api\project\views.py", line 32, in list
+    data["tools"] = [
+    ~~~~^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+2024-06-12 00:23:56,341 - django.request - ERROR - Internal Server Error: /api/projects/
+2024-06-12 00:28:26,989 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:28:30,870 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:35:07,607 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:35:11,149 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:36:23,381 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.
+2024-06-12 00:36:26,843 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2024-06-12 00:36:32,355 - django.utils.autoreload - INFO - C:\Users\Ayo\Projects\portfolio_api\project\views.py changed, reloading.

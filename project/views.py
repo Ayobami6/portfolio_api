@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from utils.exceptions import handle_internal_server_exception
-from project.models import Project
+from project.models import Project, Tool
 from project.serializers import ProjectSerializer
 from rest_framework.response import Response
 from typing import List
 from utils.response import service_response
 from rest_framework.exceptions import MethodNotAllowed
 from drf_yasg.utils import swagger_auto_schema
+from django.db.models import Prefetch
 
 # Create your views here.
 
@@ -21,11 +22,15 @@ class ProjectViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs) -> Response:
         """List Projects endpoint"""
         try:
-            projects: List[Project] = Project.objects.all()
+            projects: List[Project] = Project.objects.prefetch_related(
+                Prefetch("tools", queryset=Tool.objects.only("name")),
+            )
             serializer: List[ProjectSerializer] = self.serializer_class(
-                projects, many=True
+                projects, many=True, context={"request": request}
             )
             data: List[dict] = serializer.data
+            for project in data:
+                project["tools"] = [tool["name"] for tool in project.get("tools", [])]
             return service_response(
                 status="success",
                 message="AY Projects Fetched Successfully",

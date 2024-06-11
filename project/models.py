@@ -15,4 +15,6 @@ class Project(models.Model):
     )
 
 
-# TODO: Add Tools inline model to Project
+class Tool(models.Model):
+    name = models.CharField(max_length=100)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name="tools")
