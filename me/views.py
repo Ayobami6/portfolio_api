@@ -65,7 +65,7 @@ class ProfileAPIView(APIView):
             }
             return service_response(
                 status="success",
-                message="Thanks for Checking Out!",
+                message="Thanks For Checking Me Out!",
                 data=data,
                 status_code=200,
             )
