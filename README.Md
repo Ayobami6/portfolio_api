@@ -13,14 +13,15 @@ This project is a template for backend engineers to showcase their skills and pr
    ```
    cd portfolio_api
    ```
-3. **Create a virtual nnvironment**:
+3. **Create a virtual environment**:
    ```
    python -m venv venv
    ```
 
-4. **Activate the environment**
+4. **Activate the environment and Install Dependencies**
    ```
    source ./venv/bin/activate
+   pip install -r requirements.txt
    ```
 
 5. **Connect your postgresql database or use default sqlite**
