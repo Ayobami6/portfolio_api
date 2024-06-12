@@ -1,12 +1,8 @@
 # Backend Engineer Rest API Portfolio App Template
 
 ## Overview
-This project is a template for backend engineers to showcase their skills and projects through a REST API. Built with best practices in Docker, and Django Rest Framework, and integrated with PostgreSQL for robust data management.
+This project is a template for backend engineers to showcase their skills and projects through a REST API. Built with best practices, and Django Rest Framework, and integrated with PostgreSQL/Sqlite for robust data management.
 
-## Features
-- **RESTful Endpoints**: Read.
-- **Containerization**: Docker setup for easy deployment and scaling.
-- **Database Integration**: PostgreSQL setup for reliable data storage.
 
 ## Getting Started
 1. **Clone the repository**:
@@ -17,16 +13,49 @@ This project is a template for backend engineers to showcase their skills and pr
    ```
    cd portfolio_api
    ```
-3. **Build and run the Docker container**:
+3. **Create a virtual nnvironment**:
    ```
-   docker-compose up --build
+   python -m venv venv
    ```
 
-## Documentation
-For detailed API endpoints and usage, refer to the [API Documentation](#api-documentation) section.
+4. **Activate the environment**
+   ```
+   source ./venv/bin/activate
+   ```
+
+5. **Connect your postgresql database or use default sqlite**
+   ```bash
+   # .env
+   DB_NAME=""
+   DB_USER=""
+   DB_HOST=""
+   DB_PASSWORD=""
+   REDIS_URL=""
+   MACHINE="local" # optional to use for postgres or not for sqlite
+   ```
+
+6. **Make migration**
+   ```bash
+   # use make 
+   make migrate
+   # or
+   python manage.py migrate
+   ```
+
+7. **Start the app**
+   ```bash
+   make run
+   # or 
+   python manage.py runserver
+   ```
+
+Visit the admin page to update your portfolio details
+
+## Customization
+You can customize to your liking by adding other creative features, and if you want to make the features available to others, you can submit a pull request.
 
 ## Contributing
-Contributions are welcome! Please read our [Contributing Guide](#contributing-guide) for details on how to submit pull requests.
+Contributions are welcome! feel free to submit a pull request or create an issue.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
